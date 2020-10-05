@@ -8,9 +8,9 @@ spec:
   containers:
   - name: web
     image: s1spinoza/k8s-httpserver-8000:latest
-    readinessProbe: # Добавим проверку готовности
-      httpGet: # веб-сервера отдавать
-        path: /index.html # контент
+    readinessProbe: # added readness 
+      httpGet: # http Server 
+        path: /index.html # content
         port: 8000
     livenessProbe:
       tcpSocket: { port: 8000 }
